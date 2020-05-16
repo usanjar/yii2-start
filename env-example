@@ -1,0 +1,6 @@
+PROJECT_NAME=yii2-start
+DB_HOST=host
+DB_USER=user
+DB_PASSWORD=password
+DB_NAME=my_app
+DB_DATA_PATH=/full/path/to/db/data
