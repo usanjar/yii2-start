@@ -13,8 +13,11 @@ services:
       - php
 
   php:
-    container_name: ${PROJECT_NAME}-php-container
-    build: ./docker/php-fpm
+    container_name: kpb-belt-php-container
+    build:
+      context: ./docker/php-fpm
+      args:
+        GITHUB_AUTH_TOKEN: ${GITHUB_AUTH_TOKEN}
     restart: always
     volumes:
       - ./:/var/www/html
@@ -27,7 +30,7 @@ services:
       - POSTGRES_PASSWORD=$DB_PASSWORD
       - POSTGRES_DB=$DB_NAME
     volumes:
-#      - $DB_DATA_PATH:/var/lib/postgresql/data #FIXME: doesnt work if folder already exists
+      - $DB_DATA_PATH:/var/lib/postgresql/data
       - ./docker/postgres/docker-entrypoint-initdb.d:/docker-entrypoint-initdb.d
     ports:
       - 5432:5432

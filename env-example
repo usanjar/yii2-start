@@ -3,4 +3,5 @@ DB_HOST=host
 DB_USER=user
 DB_PASSWORD=password
 DB_NAME=my_app
-DB_DATA_PATH=/full/path/to/db/data
+DB_DATA_PATH=./runtime/db_data
+GITHUB_AUTH_TOKEN=personal_token
