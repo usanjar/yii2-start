@@ -1,4 +1,5 @@
 PROJECT_NAME=yii2-start
+MODE=prod
 DB_HOST=host
 DB_USER=user
 DB_PASSWORD=password
