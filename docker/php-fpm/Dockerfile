@@ -13,9 +13,12 @@ RUN apt-get update && apt-get install -y \
         libvpx-dev \
         libxml2-dev \
         libmagickwand-dev \
-        git
+        libzip-dev \
+        git \
+        unzip
 RUN pecl install imagick
 RUN docker-php-ext-enable imagick
+RUN docker-php-ext-install -j$(nproc) zip
 RUN docker-php-ext-install -j$(nproc) intl
 RUN docker-php-ext-install -j$(nproc) pgsql \
     && docker-php-ext-install -j$(nproc) pdo \

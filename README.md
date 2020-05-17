@@ -10,13 +10,11 @@ docker-compose up --build
 ```
 ### инициализация проекта
 ```bash
-docker-compose exec php  /bin/bash
-php init.php
+docker-compose exec php php init.php
 ```
 настроить db-local.php и запускать миграция
 ```bash
-docker-compose exec php  /bin/bash
-php yii migrate
+docker-compose exec php php yii migrate
 ```
 ### настройка Phpstorm
 откройте Yii.php файл `./vendor/yiisoft/yii2/Yii.php` и отметит как текст (Mark as plain text)
