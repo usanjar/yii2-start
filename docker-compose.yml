@@ -14,7 +14,10 @@ services:
 
   php:
     container_name: ${APP_ID}-php-container
-    image: usanjar/yii2-php-fpm:v1
+    build:
+      context: ./docker/php-fpm
+      args:
+        GITHUB_AUTH_TOKEN: ${GITHUB_AUTH_TOKEN}
     restart: always
     volumes:
       - ./:/var/www/html

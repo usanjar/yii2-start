@@ -21,6 +21,7 @@
         "symfony/dotenv": "^5.0"
     },
     "require-dev": {
+        "roave/security-advisories": "dev-master",
         "yiisoft/yii2-debug": "~2.1.0",
         "yiisoft/yii2-gii": "~2.1.0",
         "yiisoft/yii2-faker": "~2.0.0",
@@ -30,7 +31,8 @@
         "symfony/browser-kit": ">=2.7 <=4.2.4",
         "codeception/module-filesystem": "^1.0.0",
         "codeception/module-yii2": "^1.0.0",
-        "codeception/module-asserts": "^1.0.0"
+        "codeception/module-asserts": "^1.0.0",
+        "usanjar/yii2-user": "@dev"
     },
     "config": {
         "process-timeout": 1800,
@@ -67,6 +69,10 @@
         {
             "type": "composer",
             "url": "https://asset-packagist.org"
+        },
+        {
+            "type": "path",
+            "url": "./runtime/tmp-extensions/yii2-user"
         }
     ]
 }
