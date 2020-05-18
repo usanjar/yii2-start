@@ -2,7 +2,7 @@ version: '3'
 
 services:
   nginx:
-    container_name: ${PROJECT_NAME}-nginx-container
+    container_name: ${APP_ID}-nginx-container
     image: nginx:1.14
     ports:
       - 80:80
@@ -13,7 +13,7 @@ services:
       - php
 
   php:
-    container_name: kpb-belt-php-container
+    container_name: ${APP_ID}-php-container
     build:
       context: ./docker/php-fpm
       args:

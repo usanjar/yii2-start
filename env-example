@@ -1,6 +1,6 @@
-PROJECT_NAME=yii2-start
+APP_ID=yii2-start
 MODE=prod
-DB_HOST=host
+DB_HOST=postgresql
 DB_USER=user
 DB_PASSWORD=password
 DB_NAME=my_app
