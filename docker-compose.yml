@@ -21,7 +21,7 @@ services:
 
   db:
     image: library/postgres:12-alpine
-    container_name: postgresql
+    container_name: ${APP_ID}-postgresql
     environment:
       - POSTGRES_USER=${DB_USER}
       - POSTGRES_PASSWORD=${DB_PASSWORD}

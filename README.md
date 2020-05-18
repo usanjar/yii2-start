@@ -18,3 +18,22 @@ docker-compose exec php php yii migrate
 ```
 ### настройка Phpstorm
 откройте Yii.php файл `./vendor/yiisoft/yii2/Yii.php` и отметит как текст (Mark as plain text)
+
+чтобы включить debug panel открывает `web-local.php` и добавим 
+```php
+<?php
+
+$config['bootstrap'][] = 'debug';
+$config['modules']['debug'] = [
+    'class'      => \yii\debug\Module::class,
+    'allowedIPs' => ['*'],
+];
+
+$config['bootstrap'][] = 'gii';
+$config['modules']['gii'] = [
+    'class'      => \yii\gii\Module::class,
+    'allowedIPs' => ['*'],
+];
+
+return $config;
+```
