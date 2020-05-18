@@ -12,7 +12,7 @@ docker-compose up --build
 ```bash
 docker-compose exec php php init.php
 ```
-настроить db-local.php и запускать миграция
+запуск миграцию
 ```bash
 docker-compose exec php php yii migrate
 ```
